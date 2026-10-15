@@ -1,0 +1,3 @@
+ts,type,host,user,ip,outcome,stage,severity,destinationPort
+2026-10-15T11:00:00.000Z,"<script>alert(1)</script>","<img src=x onerror=alert(1)>",admin' OR '1'='1,198.51.100.42,"=cmd|' /C calc'!A0",Initial Access,high,8080
+2026-10-15T11:05:00.000Z,"@SUM(1+1)*cmd",lab-web-02,"+cmd|' /C calc'!A0","-198.51.100.42","\t=1+1",Lateral Movement,critical,443

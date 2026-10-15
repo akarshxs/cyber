@@ -1,0 +1,24 @@
+[
+  {
+    "ts": "2026-10-15T11:00:00.000Z",
+    "type": "<script>alert('XSS-Type')</script>",
+    "host": "<img src=x onerror=\"alert('XSS-Host')\">lab-web-01",
+    "user": "admin' OR '1'='1",
+    "ip": "198.51.100.42",
+    "outcome": "=cmd|' /C calc'!A0",
+    "stage": "<svg onload=alert(1)>Initial Access</svg>",
+    "severity": "high",
+    "destinationPort": 8080
+  },
+  {
+    "ts": "2026-10-15T11:05:00.000Z",
+    "type": "@SUM(1+1)*cmd|' /C calc'!A0",
+    "host": "lab-web-02",
+    "user": "+cmd|' /C calc'!A0",
+    "ip": "-cmd|' /C calc'!A0",
+    "outcome": "\t=1+1",
+    "stage": "Lateral Movement; DROP TABLE events; --",
+    "severity": "critical",
+    "destinationPort": 443
+  }
+]

@@ -1,0 +1,19 @@
+[
+  "not-an-object",
+  12345,
+  {
+    "ts": "invalid-date-format-string-that-fails-parsing",
+    "type": null,
+    "host": {"unexpected": "nested-object"}
+  },
+  {
+    "ts": "2026-10-15T10:00:00.000Z",
+    "type": "Valid in malformed file",
+    "host": "lab-web-01",
+    "user": "test.user",
+    "ip": "192.0.2.10",
+    "outcome": "success",
+    "stage": "Baseline",
+    "severity": "low"
+  }
+]

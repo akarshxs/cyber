@@ -1,0 +1,4 @@
+ts,type,host,user,ip,outcome,stage,severity,destinationPort
+not_a_timestamp,Incomplete row without required columns
+"unclosed quote in csv row,lab-web-01,user,1.2.3.4
+2026-10-15T10:00:00.000Z,Valid row,lab-web-01,user1,192.0.2.10,success,Baseline,low,80

@@ -1,0 +1,5 @@
+ts,type,host,user,ip,outcome,stage,severity,destinationPort
+2026-10-15T08:00:00.000Z,Failed login,lab-web-01,test.alex,198.51.100.42,failure,Credential Access,medium,22
+2026-10-15T08:00:15.000Z,Failed login,lab-web-01,test.alex,198.51.100.42,failure,Credential Access,medium,22
+2026-10-15T08:01:00.000Z,Successful login,lab-web-01,test.alex,198.51.100.42,success,Initial Access,high,22
+2026-10-15T08:02:30.000Z,"Privilege change, sudo",lab-web-01,test.alex,198.51.100.42,success,Privilege Escalation,critical,0

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en" data-theme="dark" data-density="comfortable">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Velocities SI — human-supervised cyber defense demonstration and security operations workspace.">
+  <title>Velocities SI | Security Operations Workspace</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body class="bg-black">
+  <div id="a11y-live" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Ambient Starfield & Dither Background -->
+  <div class="stars-bg-global" aria-hidden="true"></div>
+
+  <!-- Viewport Corner Frame Accents (Hero-style) -->
+  <div class="viewport-corner corner-tl" aria-hidden="true"></div>
+  <div class="viewport-corner corner-tr" aria-hidden="true"></div>
+  <div class="viewport-corner corner-bl" aria-hidden="true"></div>
+  <div class="viewport-corner corner-br" aria-hidden="true"></div>
+
+  <!-- Sidebar Navigation -->
+  <aside class="sidebar" id="sidebar" aria-label="Application navigation">
+    <div class="sidebar-top">
+      <a class="brand" href="#hero" aria-label="Velocities SI Home">
+        <div class="brand-logo-hero font-mono italic">UIMIX</div>
+        <div class="brand-divider"></div>
+        <div class="brand-text font-mono">
+          <span>VELOCITIES <b>SI</b></span>
+          <small class="est-badge">EST. 2025</small>
+        </div>
+      </a>
+
+      <div class="workspace-card">
+        <span class="workspace-icon" aria-hidden="true">V</span>
+        <div class="workspace-meta font-mono">
+          <strong>Team Velocities</strong>
+          <small>ABCS-03 · DEFENSE LAB</small>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-section">
+      <p class="nav-label font-mono" id="nav-label-ops">OPERATIONS // PROTOCOL</p>
+      <nav aria-labelledby="nav-label-ops" id="nav"></nav>
+    </div>
+
+    <div class="sidebar-bottom font-mono">
+      <div class="sim-badge-row">
+        <span class="status-dot sim-dot-active" aria-hidden="true"></span>
+        <span>SISYPHUS.PROTOCOL // ACTIVE</span>
+      </div>
+      <small class="text-dim">LAT: 37.7749° · LONG: 122.4194°</small>
+    </div>
+  </aside>
+
+  <!-- Main Shell -->
+  <div class="shell">
+    <header id="main-header">
+      <div class="header-left">
+        <button id="mobile-menu-btn" class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="sidebar">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+        <nav class="breadcrumb font-mono" aria-label="Breadcrumb">
+          <span class="text-dim">SYS.ROOT</span>
+          <span class="separator text-dim" aria-hidden="true">/</span>
+          <b id="breadcrumb" class="glow-text">Overview</b>
+        </nav>
+      </div>
+
+      <!-- Center HUD telemetry coordinates ticker (Hero-style) -->
+      <div class="header-hud-center font-mono">
+        <div class="hud-coords">
+          <span>LAT: 37.7749°</span>
+          <span class="hud-dot"></span>
+          <span>LONG: 122.4194°</span>
+        </div>
+        <div class="hud-visualizer-bars" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <span class="hud-badge font-mono">SYSTEM.ACTIVE</span>
+      </div>
+
+      <div class="header-actions">
+        <div class="persona-indicator font-mono" title="Role selector illustrates workflow only; not a security boundary">
+          <span class="persona-label">ANALYST:</span>
+          <span class="persona-name">LOCAL DEMO</span>
+        </div>
+        <button id="info-btn" class="btn btn-ghost btn-sm info-btn font-mono" aria-label="Simulation scope and limitations" title="View scope and limitations">
+          <svg width="15" height="15" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/><path d="M8 7v4M8 5v.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <span>SCOPE</span>
+        </button>
+        <span class="demo-pill font-mono" title="Local browser simulation">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          LAB DEMO
+        </span>
+        <button class="btn btn-hero btn-sm font-mono" id="run-demo-btn" aria-label="Run security scenario">
+          ▷ RUN SCENARIO
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+      <div class="page-heading">
+        <div class="heading-content">
+          <div class="eyebrow font-mono">
+            <span class="infinity-symbol">∞</span> DEFENSIVE OPERATIONS // ABCS-03
+          </div>
+          <h1 id="page-title" class="font-mono tracking-wider">Security overview</h1>
+          <p id="page-subtitle" class="font-mono text-dim">A clear picture of your security posture. Every signal, connected.</p>
+        </div>
+      </div>
+
+      <div class="notice font-mono" role="region" aria-label="Simulation scope notice">
+        <span class="notice-icon" aria-hidden="true">◈</span>
+        <div class="notice-content">
+          <strong>INTERACTIVE DEFENSIVE LAB DEMONSTRATION</strong>
+          <span class="text-dim">All signals are synthetic, deterministic, and evaluated locally in the browser. Zero telemetry leakage.</span>
+        </div>
+      </div>
+
+      <!-- Dynamic Page Container -->
+      <div id="content" role="region" aria-label="Page content"></div>
+
+      <!-- Hero-style HUD Footer -->
+      <footer class="app-footer font-mono">
+        <div class="footer-left">
+          <span>VELOCITIES SI <span class="muted">/</span> TEAM VELOCITIES</span>
+          <span class="footer-challenge">ABCS-03 DEFENSE LAB</span>
+          <span class="footer-version text-dim">V1.0.0</span>
+        </div>
+        <div class="footer-center">
+          <span class="infinity-symbol">∞</span>
+          <span class="footer-protocol text-dim">SISYPHUS.PROTOCOL</span>
+        </div>
+        <div class="footer-right">
+          <div class="render-status">
+            <span>◐ RENDERING</span>
+            <div class="render-leds">
+              <span class="led-1"></span>
+              <span class="led-2"></span>
+              <span class="led-3"></span>
+            </div>
+          </div>
+          <span class="frame-counter text-dim">FRAME: ∞</span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Accessible Detail Modal (Hero styled) -->
+  <dialog id="detail" aria-labelledby="detail-title" aria-modal="true">
+    <div class="dialog-shell">
+      <div class="dialog-header font-mono">
+        <div class="d-flex items-center gap-2">
+          <span class="pulse-dot"></span>
+          <h2 id="detail-title">RECORD DETAILS</h2>
+        </div>
+        <button class="btn-icon-close" id="close-dialog" aria-label="Close dialog">✕</button>
+      </div>
+      <div id="detail-body" class="dialog-content"></div>
+    </div>
+  </dialog>
+
+  <!-- Live Toast Feedback -->
+  <div id="toast" role="status" aria-live="polite" class="toast font-mono"></div>
+</body>
+</html>

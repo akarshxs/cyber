@@ -1,0 +1,46 @@
+[
+  {
+    "ts": "2026-10-15T08:00:00.000Z",
+    "type": "Failed login",
+    "host": "lab-web-01",
+    "user": "test.alex",
+    "ip": "198.51.100.42",
+    "outcome": "failure",
+    "stage": "Credential Access",
+    "severity": "medium",
+    "destinationPort": 22
+  },
+  {
+    "ts": "2026-10-15T08:00:15.000Z",
+    "type": "Failed login",
+    "host": "lab-web-01",
+    "user": "test.alex",
+    "ip": "198.51.100.42",
+    "outcome": "failure",
+    "stage": "Credential Access",
+    "severity": "medium",
+    "destinationPort": 22
+  },
+  {
+    "ts": "2026-10-15T08:01:00.000Z",
+    "type": "Successful login",
+    "host": "lab-web-01",
+    "user": "test.alex",
+    "ip": "198.51.100.42",
+    "outcome": "success",
+    "stage": "Initial Access",
+    "severity": "high",
+    "destinationPort": 22
+  },
+  {
+    "ts": "2026-10-15T08:02:30.000Z",
+    "type": "Privilege change",
+    "host": "lab-web-01",
+    "user": "test.alex",
+    "ip": "198.51.100.42",
+    "outcome": "success",
+    "stage": "Privilege Escalation",
+    "severity": "critical",
+    "destinationPort": 0
+  }
+]

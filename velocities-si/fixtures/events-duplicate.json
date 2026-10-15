@@ -1,0 +1,35 @@
+[
+  {
+    "ts": "2026-10-15T09:00:00.000Z",
+    "type": "Failed login",
+    "host": "lab-web-01",
+    "user": "test.alex",
+    "ip": "198.51.100.42",
+    "outcome": "failure",
+    "stage": "Credential Access",
+    "severity": "medium",
+    "destinationPort": 22
+  },
+  {
+    "ts": "2026-10-15T09:00:00.000Z",
+    "type": "Failed login",
+    "host": "lab-web-01",
+    "user": "test.alex",
+    "ip": "198.51.100.42",
+    "outcome": "failure",
+    "stage": "Credential Access",
+    "severity": "medium",
+    "destinationPort": 22
+  },
+  {
+    "ts": "2026-10-15T09:00:00.000Z",
+    "type": "Failed login",
+    "host": "lab-web-01",
+    "user": "test.alex",
+    "ip": "198.51.100.42",
+    "outcome": "failure",
+    "stage": "Credential Access",
+    "severity": "medium",
+    "destinationPort": 22
+  }
+]

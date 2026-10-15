@@ -1,0 +1,3 @@
+ts,type,host,user,ip,outcome,stage,severity,destinationPort
+2026-10-15T09:00:00.000Z,Failed login,lab-web-01,test.alex,198.51.100.42,failure,Credential Access,medium,22
+2026-10-15T09:00:00.000Z,Failed login,lab-web-01,test.alex,198.51.100.42,failure,Credential Access,medium,22
