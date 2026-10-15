@@ -127,12 +127,16 @@ export default function AnimationPage() {
       <div className="absolute inset-0 w-full h-full lg:hidden stars-bg"></div>
 
       {/* Top Header */}
-      <div className="absolute top-0 left-0 right-0 z-20 border-b border-white/20">
+      <div className="absolute top-0 left-0 right-0 z-20 border-b border-white/20 bg-black/40 backdrop-blur-sm">
         <div className="container mx-auto px-4 lg:px-8 py-3 lg:py-4 flex items-center justify-between">
           <div className="flex items-center gap-2 lg:gap-4">
             <div className="font-mono text-white text-xl lg:text-2xl font-bold tracking-widest italic transform -skew-x-12">
               UIMIX
             </div>
+            <div className="h-3 lg:h-4 w-px bg-white/40"></div>
+            <span className="font-mono text-white text-xs lg:text-sm tracking-widest uppercase">
+              VELOCITIES <b className="font-bold text-white">SI</b>
+            </span>
             <div className="h-3 lg:h-4 w-px bg-white/40"></div>
             <span className="text-white/60 text-[8px] lg:text-[10px] font-mono">EST. 2025</span>
           </div>
@@ -141,6 +145,8 @@ export default function AnimationPage() {
             <span>LAT: 37.7749°</span>
             <div className="w-1 h-1 bg-white/40 rounded-full"></div>
             <span>LONG: 122.4194°</span>
+            <div className="h-3 w-px bg-white/40"></div>
+            <span className="px-2 py-0.5 border border-white/40 text-white/80">SYSTEM.ACTIVE</span>
           </div>
         </div>
       </div>
@@ -172,7 +178,7 @@ export default function AnimationPage() {
 
             {/* Decorative dots pattern - desktop only */}
             <div className="hidden lg:flex gap-1 mb-3 opacity-40">
-              {Array.from({ length: 40 }).map((_, i) => (
+              {Array.from({ length: 42 }).map((_, i) => (
                 <div key={i} className="w-0.5 h-0.5 bg-white rounded-full"></div>
               ))}
             </div>
@@ -180,7 +186,9 @@ export default function AnimationPage() {
             {/* Description with subtle grid pattern */}
             <div className="relative">
               <p className="text-xs lg:text-base text-gray-300 mb-5 lg:mb-6 leading-relaxed font-mono opacity-80">
-                Like Sisyphus, we push forward — not despite the struggle, but because of it. Every iteration, every pixel, every line of code is our boulder.
+                Like Sisyphus, cyber defense never rests. In the ABCS-03 autonomous security environment,
+                every alert is triaged, every signal correlated, and every adversary contained.
+                Human-supervised. Relentlessly adaptive.
               </p>
               
               {/* Technical corner accent - desktop only */}
@@ -189,24 +197,48 @@ export default function AnimationPage() {
               </div>
             </div>
 
-            {/* Buttons with technical accents */}
-            <div className="flex flex-col lg:flex-row gap-3 lg:gap-4">
-              <button className="relative px-5 lg:px-6 py-2 lg:py-2.5 bg-transparent text-white font-mono text-xs lg:text-sm border border-white hover:bg-white hover:text-black transition-all duration-200 group">
+            {/* Technical notation marker */}
+            <div className="hidden lg:flex items-center gap-2 mb-4 text-[10px] font-mono text-white/50">
+              <span className="text-white">+</span>
+              <span>PROTOCOL.ABCS-03</span>
+            </div>
+
+            {/* Action Buttons with live links & fallback redirect */}
+            <div className="flex flex-col lg:flex-row gap-3 lg:gap-4 mb-6">
+              <a 
+                href="#overview"
+                onClick={(e) => {
+                  if (typeof window !== 'undefined' && window.location.port === '3000') {
+                    e.preventDefault();
+                    window.location.href = 'http://localhost:8080/#overview';
+                  }
+                }}
+                className="relative px-5 lg:px-6 py-2.5 lg:py-3 bg-transparent text-white font-mono text-xs lg:text-sm font-bold tracking-wider border border-white hover:bg-white hover:text-black transition-all duration-200 group text-center inline-block cursor-pointer select-none"
+              >
                 <span className="hidden lg:block absolute -top-1 -left-1 w-2 h-2 border-t border-l border-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
                 <span className="hidden lg:block absolute -bottom-1 -right-1 w-2 h-2 border-b border-r border-white opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                BEGIN THE CLIMB
-              </button>
+                ENTER COMMAND CENTER
+              </a>
               
-              <button className="relative px-5 lg:px-6 py-2 lg:py-2.5 bg-transparent border border-white text-white font-mono text-xs lg:text-sm hover:bg-white hover:text-black transition-all duration-200" style={{ borderWidth: '1px' }}>
-                EMBRACE THE JOURNEY
-              </button>
+              <a 
+                href="#ai"
+                onClick={(e) => {
+                  if (typeof window !== 'undefined' && window.location.port === '3000') {
+                    e.preventDefault();
+                    window.location.href = 'http://localhost:8080/#ai';
+                  }
+                }}
+                className="relative px-5 lg:px-6 py-2.5 lg:py-3 bg-transparent border border-white/60 text-white font-mono text-xs lg:text-sm font-bold tracking-wider hover:bg-white hover:text-black hover:border-white transition-all duration-200 text-center inline-block cursor-pointer select-none"
+              >
+                LAUNCH AI COPILOT ↗
+              </a>
             </div>
 
             {/* Bottom technical notation - desktop only */}
             <div className="hidden lg:flex items-center gap-2 mt-6 opacity-40">
               <span className="text-white text-[9px] font-mono">∞</span>
               <div className="flex-1 h-px bg-white"></div>
-              <span className="text-white text-[9px] font-mono">SISYPHUS.PROTOCOL</span>
+              <span className="text-white text-[9px] font-mono">SISYPHUS.DEFENSE.PROTOCOL // ABCS-03</span>
             </div>
           </div>
         </div>
@@ -219,15 +251,15 @@ export default function AnimationPage() {
             <span className="hidden lg:inline">SYSTEM.ACTIVE</span>
             <span className="lg:hidden">SYS.ACT</span>
             <div className="hidden lg:flex gap-1 items-end">
-              {[8, 14, 6, 12, 10, 15, 7, 11].map((height, i) => (
+              {[12, 7, 14, 9, 16, 11, 8, 13].map((height, i) => (
                 <div key={i} className="w-1 bg-white/30" style={{ height: `${height}px` }}></div>
               ))}
             </div>
-            <span>V1.0.0</span>
+            <span>V2.0.0 (ABCS-03)</span>
           </div>
           
           <div className="flex items-center gap-2 lg:gap-4 text-[8px] lg:text-[9px] font-mono text-white/50">
-            <span className="hidden lg:inline">◐ RENDERING</span>
+            <span className="hidden lg:inline">◐ NEURAL TRIAGE</span>
             <div className="flex gap-1">
               <div className="w-1 h-1 bg-white/60 rounded-full animate-pulse"></div>
               <div className="w-1 h-1 bg-white/40 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
