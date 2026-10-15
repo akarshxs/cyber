@@ -218,9 +218,9 @@ export default function AnimationPage() {
           <div className="flex items-center gap-3 lg:gap-6 text-[8px] lg:text-[9px] font-mono text-white/50">
             <span className="hidden lg:inline">SYSTEM.ACTIVE</span>
             <span className="lg:hidden">SYS.ACT</span>
-            <div className="hidden lg:flex gap-1">
-              {Array.from({ length: 8 }).map((_, i) => (
-                <div key={i} className="w-1 h-3 bg-white/30" style={{ height: `${Math.random() * 12 + 4}px` }}></div>
+            <div className="hidden lg:flex gap-1 items-end">
+              {[8, 14, 6, 12, 10, 15, 7, 11].map((height, i) => (
+                <div key={i} className="w-1 bg-white/30" style={{ height: `${height}px` }}></div>
               ))}
             </div>
             <span>V1.0.0</span>
